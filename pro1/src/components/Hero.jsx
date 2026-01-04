@@ -1,14 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-
 import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 import { repeat } from "maath/misc";
-import pa from "../assets/images/pa.png";
 import Button from "./Button";
-import { arrowRight } from '../assets/icons'
+import { arrowRight } from "../assets/icons";
+import { FaInstagram, FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   const roles = ["Full Stack Developer", "Backend Dev", "React + Laravel Dev"];
@@ -24,8 +23,8 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}>
-        
+        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 `}
+      >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
@@ -54,50 +53,60 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100 mb-10`}>
             I develope Softwares,User <br /> interfaces and Web applications
           </p>
-        <Button name={'Hire Me'} imgUrl={arrowRight} backgroundColor={'#915eff'} className='mt-10'/>
+          <Button
+            name={"Hire Me"}
+            imgUrl={arrowRight}
+            backgroundColor={"#915eff"}
+            className="mt-10"
+            onClick={() => {
+              const el = document.getElementById('contact');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+          />
         </div>
-        <motion.div
-        className="relative w-74 h-74 rounded-full overflow-hidden border-4 border-[#915eff] shadow-lg ml-50 mt-7"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100, damping: 15, duration: 1 }}
-        whileHover={{ scale: 1.05, rotate: 2 }}
-      >
-        {/* animated glow around image */}
-        <motion.div
-          className="absolute inset-0 rounded-full border-2 border-[#915eff] animate-pulse"
-          animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
-        />
-        <img
-          src={pa}
-          alt="profile"
-          className="w-full h-full object-cover rounded-full"
-        />
-      </motion.div>
+        <div className="flex flex-col gap-4 ml-65 self-center -mt-25">
+          <a href="https://www.instagram.com/senbarok/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={30} className="text-white hover:text-[#915eff] transition-colors cursor-pointer" />
+          </a>
+          <a href="https://www.linkedin.com/in/mikir-biruk-739229346/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={30} className="text-white hover:text-[#915eff] transition-colors cursor-pointer" />
+          </a>
+          <a href="https://github.com/brukmikir" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={30} className="text-white hover:text-[#915eff] transition-colors cursor-pointer" />
+          </a>
+        </div>
+        {/* profile image moved to About section */}
       </div>
       <ComputersCanvas />
 
       <div
         className="absolute xs:bottom-10 bottom-12 w-full
-                      flex justify-center items-center " >
-        <a href="#about">
-          <div
-            className="w-[35px] h-[64px] rounded-3xl
-                                         border-4 border-secondary flex
-                                         justify-center items-center p-2"
-          >
-            <motion.dev
-              animate={{
-                y: [0, 24, 0],
-              }}
+                      flex justify-center items-center "
+      >
+        <a href="#introduction">
+          <div className="w-[42px] h-[64px] rounded-3xl flex justify-center items-center p-2">
+            <motion.div
+              animate={{ y: [0, 22, 0] }}
               transition={{
-                duration: 1.5,
+                duration: 1.1,
                 repeat: Infinity,
                 repeatType: "loop",
+                ease: "easeInOut",
               }}
-              className="w-3 h-3 rounded-full bg-white mb-2 "
-            />
+              className="mb-2 flex items-center justify-center"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-white"
+              >
+                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M8.5 11l3.5 3.5 3.5-3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" opacity="0.95" />
+              </svg>
+            </motion.div>
           </div>
         </a>
       </div>

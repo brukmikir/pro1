@@ -119,4 +119,4 @@ const handleSubmit=(e)=>{
   )
 }
 
-export default SectionWrap(Contact,"")
+export default SectionWrap(Contact,"contact")

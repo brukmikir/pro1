@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({name,imgUrl,backgroundColor,borderColor,textColor,fullwidth}) => {
+const Button = ({name,imgUrl,backgroundColor,borderColor,textColor,fullwidth, onClick}) => {
   return (
-    <button className={`flex justify-center items-center
+    <button onClick={onClick} className={`flex justify-center items-center
                       px-7 py-4 gap-2 text-lg border rounded-full
                       ${backgroundColor ? `${backgroundColor} ${borderColor} ${textColor}` :
                      ' bg-[#915eff] text-white'} ${fullwidth &&'w-full'}`}>
