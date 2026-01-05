@@ -68,7 +68,7 @@ const Hero = () => {
           <a href="https://www.instagram.com/senbarok/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={30} className="text-white hover:text-[#915eff] transition-colors cursor-pointer" />
           </a>
-          <a href="https://www.linkedin.com/in/mikir-biruk-739229346/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/mikir-biruk-dev/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} className="text-white hover:text-[#915eff] transition-colors cursor-pointer" />
           </a>
           <a href="https://github.com/brukmikir" target="_blank" rel="noopener noreferrer">
@@ -115,3 +115,4 @@ const Hero = () => {
 };
 
 export default Hero;
+//https://birukmikir.netlify.app/

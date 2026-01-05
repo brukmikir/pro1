@@ -70,6 +70,10 @@ const technologies = [
     icon: css,
   },
   {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
     name: "JavaScript",
     icon: javascript,
   },
@@ -82,12 +86,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Laravel",
+    icon: laravel,
   },
   {
     name: "Node JS",
@@ -97,10 +97,7 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Laravel",
-    icon: laravel,
-  },
+  
   {
     name: "Three JS",
     icon: threejs,
